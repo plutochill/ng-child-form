@@ -1,0 +1,21 @@
+<p>hero component</p>
+<form [formGroup]="heroForm">
+  <div>
+    <input type="text" formControlName="heroName" placeholder="name" />
+  </div>
+
+  <div>
+    <app-powers></app-powers>
+  </div>
+
+  <!-- <div>
+  <app-hobbies
+    [parentForm]="heroForm"
+    [formGroup]="heroForm.get('hobbies')"
+  ></app-hobbies>
+</div> -->
+
+  <button (click)="submitLog()">Submit</button>
+</form>
+
+<div>{{ heroForm.value | json }}</div>
